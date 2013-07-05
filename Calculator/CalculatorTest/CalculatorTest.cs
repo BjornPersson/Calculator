@@ -48,5 +48,17 @@ namespace Calculator
             Assert.AreEqual(CalculatorStates.EnteringOperand1, CalculatorHelper.State);
         }
 
+        [TestMethod]
+        public void StateIsEnteringOperand2Test()
+        {
+            _calculatorHelper = new CalculatorHelper();
+
+            // 1 + 1
+            _calculatorHelper.HandleButton1();
+            _calculatorHelper.HandleButtonPlus();
+            _calculatorHelper.HandleButton1();
+            Assert.AreEqual(CalculatorStates.EnteringOperand2, CalculatorHelper.State);
+        }
+
     }
 }
