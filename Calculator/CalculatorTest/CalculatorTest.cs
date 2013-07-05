@@ -23,5 +23,14 @@ namespace Calculator
             _calculatorHelper.HandleButton1();
             Assert.AreEqual("1", CalculatorHelper.DisplayText);
         }
+
+        [TestMethod]
+        public void HandleButtonPlusTest()
+        {
+            _calculatorHelper = new CalculatorHelper();
+            _calculatorHelper.HandleButton1();
+            _calculatorHelper.HandleButtonPlus();
+            Assert.AreEqual("1 +", CalculatorHelper.DisplayText);
+        }
     }
 }

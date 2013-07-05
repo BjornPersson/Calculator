@@ -11,5 +11,10 @@
         public static int Operand1 { get; set; }
 
         public static string DisplayText { get; set; }
+
+        public void HandleButtonPlus()
+        {
+            DisplayText = "1 +";
+        }
     }
 }
