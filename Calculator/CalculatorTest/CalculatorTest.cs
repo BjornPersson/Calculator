@@ -60,5 +60,17 @@ namespace Calculator
             Assert.AreEqual(CalculatorStates.EnteringOperand2, CalculatorHelper.State);
         }
 
+        [TestMethod]
+        public void DisplayShowsOnePlusOneTest()
+        {
+            _calculatorHelper = new CalculatorHelper();
+
+            // 1 + 1
+            _calculatorHelper.HandleButton1();
+            _calculatorHelper.HandleButtonPlus();
+            _calculatorHelper.HandleButton1();
+            Assert.AreEqual("1 + 1", CalculatorHelper.DisplayText);
+            Assert.AreEqual(1, CalculatorHelper.Operand2);
+        }
     }
 }
