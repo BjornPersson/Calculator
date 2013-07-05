@@ -31,5 +31,11 @@ namespace CalculatorApplication
         }
 
         protected CalculatorHelper CalculatorHelper { get; set; }
+
+        private void buttonPlus_Click(object sender, EventArgs e)
+        {
+            CalculatorHelper.HandleButtonPlus();
+            DisplayTextBox.Text = CalculatorHelper.DisplayText;
+        }
     }
 }
