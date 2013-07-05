@@ -12,6 +12,8 @@
 
         public static string DisplayText { get; set; }
 
+        public static CalculatorStates State { get; set; }
+
         public void HandleButtonPlus()
         {
             DisplayText = "1 +";

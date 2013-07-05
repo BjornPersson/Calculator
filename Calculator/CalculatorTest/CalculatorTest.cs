@@ -32,5 +32,12 @@ namespace Calculator
             _calculatorHelper.HandleButtonPlus();
             Assert.AreEqual("1 +", CalculatorHelper.DisplayText);
         }
+        
+        [TestMethod]
+        public void StatIsClearAtStartUpTest()
+        {
+            _calculatorHelper = new CalculatorHelper();
+            Assert.AreEqual(CalculatorStates.Clear, CalculatorHelper.State);
+        }
     }
 }
