@@ -6,21 +6,22 @@ namespace Calculator
     [TestClass]
     public class CalculatorTest
     {
+        private CalculatorHelper _calculatorHelper;
+
         [TestMethod]
-        public void TestMethod1()
+        public void HandleButton1Test()
         {
-            CalculatorHelper.HandleButton1();
+            _calculatorHelper = new CalculatorHelper();
+            _calculatorHelper.HandleButton1();
             Assert.AreEqual(1, CalculatorHelper.Operand1);
         }
-    }
 
-    public class CalculatorHelper
-    {
-        public static void HandleButton1()
+        [TestMethod]
+        public void DisplayShows1Test()
         {
-            Operand1 = 1;
+            _calculatorHelper = new CalculatorHelper();
+            _calculatorHelper.HandleButton1();
+            Assert.AreEqual("1", CalculatorHelper.DisplayText);
         }
-
-        public static int Operand1 { get; set; }
     }
 }
