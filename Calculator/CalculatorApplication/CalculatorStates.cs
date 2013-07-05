@@ -1,4 +1,6 @@
 ﻿namespace Calculator
 {
-    public enum CalculatorStates {Clear}
+    public enum CalculatorStates {Clear,
+        EnteringOperand1
+    }
 }

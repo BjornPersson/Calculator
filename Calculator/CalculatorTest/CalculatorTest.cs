@@ -34,10 +34,19 @@ namespace Calculator
         }
         
         [TestMethod]
-        public void StatIsClearAtStartUpTest()
+        public void StateIsClearAtStartUpTest()
         {
             _calculatorHelper = new CalculatorHelper();
             Assert.AreEqual(CalculatorStates.Clear, CalculatorHelper.State);
         }
+
+        [TestMethod]
+        public void StateIsEnteringOperand1Test()
+        {
+            _calculatorHelper = new CalculatorHelper();
+            _calculatorHelper.HandleButton1();
+            Assert.AreEqual(CalculatorStates.EnteringOperand1, CalculatorHelper.State);
+        }
+
     }
 }
